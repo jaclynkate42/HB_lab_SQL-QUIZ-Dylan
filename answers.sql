@@ -169,3 +169,52 @@ with the letter 'M'.
 
 
 SELECT email, first_name, last_name FROM salespeople WHERE region IN ('Northwest', 'Southwest') AND last_name LIKE 'M%';
+
+
+==========
+13
+
+-----
+
+Write a query that shows the melon type, common name, price, and the
+price of the melon given in euros. The 'melons' table has prices in dollars,
+and the dollar to euro conversion rate is 0.73.
+
+
+-----
+
+
+SELECT
+  melon_type,
+  common_name,
+  price,
+  price * 0.73 AS price_euros
+FROM
+  melons;
+
+
+==========
+14
+
+-----
+
+Write a query that shows the total number of customers in our customer
+table.
+
+-----
+
+
+SELECT COUNT(*) AS total_customers FROM customers;
+
+
+==========
+15
+
+-----
+
+Write a query that counts the number of orders (in the orders table) shipped to California.
+
+-----
+
+
+SELECT COUNT(*) AS cali_orders FROM orders WHERE shipto_state = 'CA';
